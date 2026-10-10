@@ -11,6 +11,21 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 - Seções de stack e projetos com filtros e efeitos de hover
 - Responsivo e com suporte a `prefers-reduced-motion`
 
+## Estrutura
+
+```
+.
+├── index.html            # marcação: hero, sobre, stack, projetos, contato
+└── assets/
+    ├── css/style.css     # estilos e tokens de cor (variáveis em :root)
+    └── js/
+        ├── icons.js      # SVGs do Devicon + ícones próprios da stack
+        └── main.js       # filtros, brilho do cursor, grade de stack e animação do hero
+```
+
+- **Novo projeto:** copie um `<article class="card">` em `index.html` e ajuste `data-s` (`sys`, `infra` ou `study`) para o filtro.
+- **Nova tecnologia:** adicione uma linha em `techs` no `main.js`; se tiver logo no Devicon, inclua o SVG em `icons.js` com a mesma chave.
+
 ## Rodando localmente
 
 Basta abrir o `index.html` no navegador.
