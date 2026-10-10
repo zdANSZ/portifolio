@@ -15,16 +15,19 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 
 ```
 .
-├── index.html            # marcação: hero, sobre, stack, projetos, contato
+├── index.html            # marcação: hero, sobre, stack, contato e sprite dos ícones de marca
 └── assets/
     ├── css/style.css     # estilos e tokens de cor (variáveis em :root)
+    ├── img/              # favicon, apple-touch-icon e imagem de compartilhamento (og.png)
     └── js/
+        ├── projects.js   # dados dos cards de projetos
         ├── icons.js      # SVGs do Devicon + ícones próprios da stack
-        └── main.js       # filtros, brilho do cursor, grade de stack e animação do hero
+        └── main.js       # monta projetos e stack, filtros, brilho do cursor e animação do hero
 ```
 
-- **Novo projeto:** copie um `<article class="card">` em `index.html` e ajuste `data-s` (`sys`, `infra` ou `study`) para o filtro.
+- **Novo projeto:** adicione um objeto em `assets/js/projects.js`; os campos estão descritos no topo do arquivo.
 - **Nova tecnologia:** adicione uma linha em `techs` no `main.js`; se tiver logo no Devicon, inclua o SVG em `icons.js` com a mesma chave.
+- **Prévia de link:** depois do deploy, troque `og:image` no `index.html` pela URL absoluta (ex.: `https://seu-dominio/assets/img/og.png`), que é o formato exigido por WhatsApp e LinkedIn.
 
 ## Rodando localmente
 

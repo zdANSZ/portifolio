@@ -2,6 +2,18 @@
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const css=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
 
+  /* ---------- cards de projetos (dados em projects.js) ---------- */
+  document.getElementById('projects').innerHTML=window.PROJECTS.map(p=>`
+    <article class="card${p.wide?' wide':''}" data-s="${p.filter}" style="--c:var(--${p.color})">
+      <div class="shot">${p.shot}</div>
+      <div class="body">
+        <div class="top"><h3>${p.title}</h3><span class="status${p.statusKind?' '+p.statusKind:''}">${p.status}</span></div>
+        <p>${p.desc}</p>
+        <div class="chips">${p.chips.map(c=>`<span>${c}</span>`).join('')}</div>
+        <div class="links">${p.link.href?`<a href="${p.link.href}" target="_blank" rel="noopener">${p.link.text} <span aria-hidden="true">↗</span></a>`:p.link.text}</div>
+      </div>
+    </article>`).join('');
+
   /* ---------- filtros de projetos ---------- */
   const fb=document.querySelectorAll('.filters button');
   fb.forEach(b=>b.addEventListener('click',()=>{
