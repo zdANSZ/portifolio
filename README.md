@@ -16,7 +16,10 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 ```
 .
 ├── index.html            # marcação: hero, sobre, stack, contato e sprite dos ícones de marca
+├── curriculo/
+│   └── curriculo.html    # fonte do currículo em PDF
 └── assets/
+    ├── curriculo-daniel-castilho.pdf   # baixado pelo botão "Currículo"
     ├── css/style.css     # estilos e tokens de cor (variáveis em :root)
     ├── img/              # favicon, apple-touch-icon e imagem de compartilhamento (og.png)
     └── js/
@@ -27,6 +30,7 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 
 - **Novo projeto:** adicione um objeto em `assets/js/projects.js`; os campos estão descritos no topo do arquivo.
 - **Nova tecnologia:** adicione uma linha em `techs` no `main.js`; se tiver logo no Devicon, inclua o SVG em `icons.js` com a mesma chave.
+- **Currículo:** edite `curriculo/curriculo.html`, abra no Chrome e use Imprimir → Salvar como PDF (A4, margens "Nenhuma"), substituindo `assets/curriculo-daniel-castilho.pdf`.
 - **Prévia de link:** depois do deploy, troque `og:image` no `index.html` pela URL absoluta (ex.: `https://seu-dominio/assets/img/og.png`), que é o formato exigido por WhatsApp e LinkedIn.
 
 ## Rodando localmente

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Currículo — Daniel Santos de Castilho</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Fonte do PDF em assets/curriculo-daniel-castilho.pdf: abra no Chrome, Imprimir → Salvar como PDF (A4, margens "Nenhuma"). */
+@page{size:A4;margin:0}
+:root{--fg:#16181a;--muted:#555b61;--line:#dcdcd8;--accent:#b4661c}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--fg)}
+body{font:400 9.1pt/1.4 "Geist","Segoe UI",system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;min-height:297mm;padding:12mm 14mm 10mm}
+h1{font-size:21pt;font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.1}
+.role{margin:3px 0 8px;font-size:11pt;color:var(--muted)}
+.role b{color:var(--fg);font-weight:600}
+.contact{display:flex;flex-wrap:wrap;gap:2px 14px;font:400 8.6pt "Geist Mono",ui-monospace,monospace;color:var(--muted)}
+.contact a{color:inherit;text-decoration:none}
+h2{font-size:8.4pt;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:11px 0 5px;padding-bottom:3px;border-bottom:1px solid var(--line)}
+p{margin:0}
+.item{margin-bottom:6px}
+.item:last-child{margin-bottom:0}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.head h3{font-size:10pt;font-weight:600;margin:0}
+.head h3 span{font-weight:400;color:var(--muted)}
+.when{font:400 8.4pt "Geist Mono",ui-monospace,monospace;color:var(--muted);white-space:nowrap}
+ul{margin:3px 0 0;padding-left:14px}
+li{margin:1.5px 0}
+li::marker{color:var(--accent)}
+.tech{margin-top:2px;font:400 8.2pt "Geist Mono",ui-monospace,monospace;color:var(--muted)}
+.skills{display:grid;grid-template-columns:104px 1fr;gap:3px 10px}
+.skills dt{font-weight:600}
+.skills dd{margin:0}
+.cols{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:0 18px}
+.todo{background:#ffe9a8;padding:0 3px;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Daniel Santos de Castilho</h1>
+  <p class="role"><b>Desenvolvedor Full Stack</b> · 20 anos · Taubaté, SP</p>
+  <div class="contact">
+    <a href="tel:+5512992429757">(12) 99242-9757</a>
+    <a href="mailto:ds771698@gmail.com">ds771698@gmail.com</a>
+    <a href="https://www.linkedin.com/in/castilhodan/">linkedin.com/in/castilhodan</a>
+    <a href="https://github.com/zdANSZ">github.com/zdANSZ</a>
+  </div>
+
+  <h2>Resumo</h2>
+  <p>Desenvolvedor full stack e estudante de ADS no IFSP. Comecei na área administrativa de uma rede de pousadas e passei a construir as ferramentas da equipe, o que virou o sistema de gestão da empresa. Cuido do ciclo inteiro (dados, APIs, interface, servidor e deploy) e uso agentes de IA no fluxo de desenvolvimento, do planejamento à revisão. Foco em software em produção, com atenção a segurança e testes.</p>
+
+  <h2>Experiência</h2>
+  <div class="item">
+    <div class="head"><h3>Pousadas D'Biagy <span>· <span class="todo">[cargo]</span></span></h3><span class="when"><span class="todo">[mês/ano]</span> – atual</span></div>
+    <ul>
+      <li>Desenvolvi o sistema de gestão operacional usado diariamente pelos setores de governança, manutenção, compras e estoque, com acesso por cargo, trilha de auditoria, upload de documentos e testes automatizados da API.</li>
+      <li>Criei um serviço em Node.js integrado ao sistema que envia tarefas, alertas e relatórios às equipes pelo WhatsApp, com painel web para agendar e controlar os envios.</li>
+      <li>Montei e administro o servidor Linux na Oracle Cloud que hospeda os sistemas: Nginx e PHP-FPM, processos Node com PM2, deploy via Git com chaves SSH, manutenção agendada com alerta automático e recuperação de incidentes em produção.</li>
+    </ul>
+    <p class="tech">PHP · JavaScript · Node.js · PostgreSQL · Supabase · Tailwind · Linux · Nginx · PM2</p>
+  </div>
+
+  <h2>Projetos</h2>
+  <div class="item">
+    <div class="head"><h3>Zapedix <span>· SaaS de cardápio digital</span></h3><span class="when">MVP</span></div>
+    <p>Plataforma multi-tenant em que o pedido chega pronto no WhatsApp da loja. Painel com crediário, faturamento e catálogo, isolamento de dados por cliente (RLS) e suíte de testes de permissão.</p>
+    <p class="tech">PostgreSQL · Supabase · Node.js · Chart.js</p>
+  </div>
+  <div class="item">
+    <div class="head"><h3>Cluster de servidores <span>· IFSP</span></h3><span class="when">Acadêmico</span></div>
+    <p>Servidor da faculdade montado com três PCs: Debian 13 em cada nó, cluster Docker Swarm (1 manager, 2 workers), armazenamento compartilhado via NFS, firewall UFW, rede privada com Tailscale e serviços systemd.</p>
+    <p class="tech">Debian · Docker Swarm · NFS · Tailscale · systemd</p>
+  </div>
+  <div class="item">
+    <div class="head"><h3>API Proteção Animal <span>· IFSP</span></h3><span class="when">Acadêmico</span></div>
+    <p>API REST para uma ONG, com autenticação JWT, perfis de usuário e administrador, senhas com BCrypt e versionamento do banco com migrations.</p>
+    <p class="tech">Java 17 · Spring Boot 3 · JPA · MySQL · Flyway</p>
+  </div>
+  <div class="item">
+    <div class="head"><h3>Sr. Enxoval <span>· srenxoval.com.br</span></h3><span class="when">No ar</span></div>
+    <p>Site de locação de enxoval com catálogo, cálculo de diárias e pedido pelo WhatsApp; o painel administrativo gera o catálogo em PDF.</p>
+    <p class="tech">Vite · JavaScript · Supabase</p>
+  </div>
+
+  <h2>Competências técnicas</h2>
+  <dl class="skills">
+    <dt>Back-end</dt><dd>Java, Spring Boot, Node.js, Python, PHP, APIs REST, JWT / OAuth</dd>
+    <dt>Front-end</dt><dd>TypeScript, JavaScript, Angular, Tailwind CSS, HTML e CSS</dd>
+    <dt>Dados</dt><dd>PostgreSQL, SQL Server, MySQL, MongoDB, Supabase, RLS</dd>
+    <dt>DevOps e Cloud</dt><dd>Linux, Docker, Nginx, Oracle Cloud, Git</dd>
+    <dt>Práticas</dt><dd>Testes automatizados, segurança de aplicações, orquestração de agentes de IA</dd>
+  </dl>
+
+  <div class="cols">
+    <div>
+      <h2>Formação</h2>
+      <div class="item">
+        <div class="head"><h3>Tecnólogo em ADS</h3><span class="when">prev. 2027</span></div>
+        <p>IFSP — Campos do Jordão</p>
+      </div>
+      <div class="item">
+        <div class="head"><h3>Ensino Médio</h3><span class="when">2024</span></div>
+        <p>Colégio Tableau — Taubaté</p>
+      </div>
+    </div>
+    <div>
+      <h2>Cursos</h2>
+      <ul style="margin-top:0">
+        <li>AZ-900 Azure Fundamentals — SENAI</li>
+        <li>DP-900 Azure Data Fundamentals — SENAI</li>
+        <li>Power BI — SENAI</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Idiomas</h2>
+      <p>Português nativo<br>Inglês básico</p>
+      <h2>Disponibilidade</h2>
+      <p>Meio período (faculdade à noite)</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
