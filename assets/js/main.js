@@ -2,8 +2,18 @@
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const css=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
 
+  /* ---------- brilho que segue o cursor ---------- */
+  function follow(el,xv,yv){el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty(xv,(e.clientX-r.left)+'px');el.style.setProperty(yv,(e.clientY-r.top)+'px');});}
+  follow(document.getElementById('contato'),'--gx','--gy');
+
   /* ---------- cards de projetos (dados em projects.js) ---------- */
-  document.getElementById('projects').innerHTML=window.PROJECTS.map(p=>`
+  const projects=document.getElementById('projects');
+  let filter='all';
+  function applyFilter(){projects.querySelectorAll('.card').forEach(c=>{c.hidden=!(filter==='all'||c.dataset.s===filter)});}
+  function renderProjects(lang){
+    projects.innerHTML=window.PROJECTS.map(base=>{
+      const p=lang==='en'&&base.en?{...base,...base.en,link:{...base.link,...base.en.link}}:base;
+      return `
     <article class="card${p.wide?' wide':''}" data-s="${p.filter}" style="--c:var(--${p.color})">
       <div class="shot">${p.shot}</div>
       <div class="body">
@@ -12,20 +22,17 @@
         <div class="chips">${p.chips.map(c=>`<span>${c}</span>`).join('')}</div>
         <div class="links">${p.link.href?`<a href="${p.link.href}" target="_blank" rel="noopener">${p.link.text} <span aria-hidden="true">↗</span></a>`:p.link.text}</div>
       </div>
-    </article>`).join('');
+    </article>`;}).join('');
+    projects.querySelectorAll('.card').forEach(c=>follow(c,'--mx','--my'));
+    applyFilter();
+  }
 
   /* ---------- filtros de projetos ---------- */
   const fb=document.querySelectorAll('.filters button');
   fb.forEach(b=>b.addEventListener('click',()=>{
     fb.forEach(x=>x.setAttribute('aria-pressed',x===b));
-    const f=b.dataset.f;
-    document.querySelectorAll('#projects .card').forEach(c=>{c.hidden=!(f==='all'||c.dataset.s===f)});
+    filter=b.dataset.f;applyFilter();
   }));
-
-  /* ---------- brilho que segue o cursor ---------- */
-  function follow(el,xv,yv){el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty(xv,(e.clientX-r.left)+'px');el.style.setProperty(yv,(e.clientY-r.top)+'px');});}
-  document.querySelectorAll('.card').forEach(c=>follow(c,'--mx','--my'));
-  follow(document.getElementById('contato'),'--gx','--gy');
 
   /* ---------- stack (ícones em icons.js) ---------- */
   const {DEVICONS,GENERIC}=window;
@@ -40,11 +47,11 @@
   const tiles=document.getElementById('tiles'),legend=document.getElementById('legend');
   techs.forEach(([s,n,g],i)=>{
     const el=document.createElement('div');el.className='tile';el.dataset.g=g;el.style.setProperty('--c',groups[g][1]);
-    el.innerHTML=`<div class="num"><span>${String(i+1).padStart(2,'0')}</span><i></i></div><div class="ico" aria-hidden="true">${DEVICONS[s]||GENERIC[s]||''}</div><div class="name">${n}</div>`;
+    el.innerHTML=`<div class="num"><span>${String(i+1).padStart(2,'0')}</span><i></i></div><div class="ico" aria-hidden="true">${DEVICONS[s]||GENERIC[s]||''}</div><div class="name" data-i18n="tech.${s}">${n}</div>`;
     follow(el,'--mx','--my');tiles.appendChild(el);
   });
   Object.entries(groups).forEach(([k,[label,c]])=>{
-    const b=document.createElement('button');b.type='button';b.textContent=label;b.style.setProperty('--c',c);b.setAttribute('aria-pressed','false');
+    const b=document.createElement('button');b.type='button';b.textContent=label;b.dataset.i18n='group.'+k;b.style.setProperty('--c',c);b.setAttribute('aria-pressed','false');
     b.addEventListener('click',()=>{
       const on=b.getAttribute('aria-pressed')!=='true';
       legend.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));
@@ -53,6 +60,36 @@
     });
     legend.appendChild(b);
   });
+
+  /* ---------- idioma (traduções em i18n.js) ----------
+     PT é o texto original do HTML; na primeira troca ele é guardado para poder voltar.
+     Ordem de escolha: ?lang= na URL, escolha salva, idioma do navegador. */
+  const EN=window.I18N_EN,orig=new WeakMap(),origAria=new WeakMap();
+  const meta=document.querySelector('meta[name="description"]'),metaPT=meta.content;
+  function setLang(lang){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      if(!orig.has(el))orig.set(el,el.innerHTML);
+      const t=lang==='en'?EN[el.dataset.i18n]:undefined;
+      el.innerHTML=t!==undefined?t:orig.get(el);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el=>{
+      if(!origAria.has(el))origAria.set(el,el.getAttribute('aria-label'));
+      el.setAttribute('aria-label',lang==='en'?EN[el.dataset.i18nAria]:origAria.get(el));
+    });
+    meta.content=lang==='en'?EN['meta.description']:metaPT;
+    document.documentElement.lang=lang==='en'?'en':'pt-BR';
+    document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+    renderProjects(lang);
+  }
+  let saved=null;
+  try{saved=localStorage.getItem('lang')}catch(e){}
+  const q=new URLSearchParams(location.search).get('lang');
+  const start=['pt','en'].includes(q)?q:['pt','en'].includes(saved)?saved:(/^pt\b/i.test(navigator.language||'pt')?'pt':'en');
+  setLang(start);
+  document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{
+    setLang(b.dataset.lang);
+    try{localStorage.setItem('lang',b.dataset.lang)}catch(e){}
+  }));
 
   /* ---------- campo de pontos do hero ---------- */
   const cv=document.getElementById('field'),ctx=cv.getContext('2d'),hero=cv.parentElement;

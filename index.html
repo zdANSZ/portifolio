@@ -31,48 +31,54 @@
   <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
-<nav class="nav" aria-label="Principal">
-  <a class="brand" href="#inicio"><span class="mark">DC</span>Daniel Castilho</a>
-  <ul>
-    <li class="hide-sm"><a href="#sobre">Sobre</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
+<nav class="nav" aria-label="Principal" data-i18n-aria="nav.aria">
+  <a class="brand" href="#inicio"><span class="mark">DC</span><span class="brand-name">Daniel Castilho</span></a>
+  <div class="nav-end">
+    <ul>
+      <li class="hide-sm"><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="lang.aria">
+      <button type="button" data-lang="pt" aria-pressed="true" lang="pt-BR" title="Português">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+    </div>
+  </div>
 </nav>
 
 <header class="hero" id="inicio">
   <canvas id="field" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="kicker rise">Taubaté, SP &nbsp;/&nbsp; estudante de ADS no IFSP</p>
+    <p class="kicker rise" data-i18n="hero.kicker">Taubaté, SP &nbsp;/&nbsp; estudante de ADS no IFSP</p>
     <h1 class="rise d1">Daniel<br><span class="soft">Castilho</span></h1>
-    <p class="role rise d2"><b>Desenvolvedor Full Stack</b> · da interface ao servidor</p>
-    <p class="lede rise d3">Desenvolvo sistemas web, APIs e automações, monto a infraestrutura onde eles rodam e uso agentes de IA como parte do fluxo de desenvolvimento, do planejamento à revisão do código.</p>
+    <p class="role rise d2" data-i18n="hero.role"><b>Desenvolvedor Full Stack</b> · da interface ao servidor</p>
+    <p class="lede rise d3" data-i18n="hero.lede">Desenvolvo sistemas web, APIs e automações, monto a infraestrutura onde eles rodam e uso agentes de IA como parte do fluxo de desenvolvimento, do planejamento à revisão do código.</p>
     <div class="ctas rise d4">
-      <a class="btn primary" href="#projetos">Ver projetos <span class="arr" aria-hidden="true">↗</span></a>
+      <a class="btn primary" href="#projetos"><span data-i18n="cta.projects">Ver projetos</span> <span class="arr" aria-hidden="true">↗</span></a>
       <a class="btn" href="https://www.linkedin.com/in/castilhodan/" target="_blank" rel="noopener"><svg class="brand-ico" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
       <a class="btn" href="https://github.com/zdANSZ" target="_blank" rel="noopener"><svg class="brand-ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
-      <a class="btn" href="assets/curriculo-daniel-castilho.pdf" download><svg class="brand-ico" aria-hidden="true"><use href="#i-download"/></svg>Currículo</a>
+      <a class="btn" href="assets/curriculo-daniel-castilho.pdf" download><svg class="brand-ico" aria-hidden="true"><use href="#i-download"/></svg><span data-i18n="cta.cv">Currículo</span></a>
     </div>
   </div>
 </header>
 
 <main class="wrap">
   <section id="sobre">
-    <span class="label">Sobre</span>
+    <span class="label" data-i18n="about.label">Sobre</span>
     <div class="about">
       <div class="txt">
-        <h2 style="margin-bottom:28px">Aprendi programando o que a operação precisava.</h2>
-        <p>Comecei na área administrativa de uma rede de pousadas e passei a construir as ferramentas que a equipe usava no dia a dia. Esse trabalho virou o sistema de gestão da empresa e me levou ao desenvolvimento full stack.</p>
-        <p>Hoje cuido do ciclo inteiro: modelagem de dados, APIs, interface, servidor e deploy. Montei e administro a infraestrutura em nuvem que mantém esses sistemas no ar e, na faculdade, construí um cluster de servidores com Docker Swarm.</p>
-        <p>Boa parte do meu trabalho hoje é orquestrar agentes de IA como Claude Code e Codex. Quebro o problema em etapas, escrevo as especificações, configuro subagentes, skills e regras para cada tipo de tarefa e reviso tudo o que é gerado antes de ir para produção. A IA acelera a entrega, e as decisões de arquitetura, segurança e qualidade continuam comigo.</p>
-        <p>Gosto de entregar software que roda em produção, com atenção a segurança, testes e a quem vai usar.</p>
+        <h2 style="margin-bottom:28px" data-i18n="about.title">Aprendi programando o que a operação precisava.</h2>
+        <p data-i18n="about.p1">Comecei na área administrativa de uma rede de pousadas e passei a construir as ferramentas que a equipe usava no dia a dia. Esse trabalho virou o sistema de gestão da empresa e me levou ao desenvolvimento full stack.</p>
+        <p data-i18n="about.p2">Hoje cuido do ciclo inteiro: modelagem de dados, APIs, interface, servidor e deploy. Montei e administro a infraestrutura em nuvem que mantém esses sistemas no ar e, na faculdade, construí um cluster de servidores com Docker Swarm.</p>
+        <p data-i18n="about.p3">Boa parte do meu trabalho hoje é orquestrar agentes de IA como Claude Code e Codex. Quebro o problema em etapas, escrevo as especificações, configuro subagentes, skills e regras para cada tipo de tarefa e reviso tudo o que é gerado antes de ir para produção. A IA acelera a entrega, e as decisões de arquitetura, segurança e qualidade continuam comigo.</p>
+        <p data-i18n="about.p4">Gosto de entregar software que roda em produção, com atenção a segurança, testes e a quem vai usar.</p>
       </div>
       <dl class="facts">
-        <div class="fact"><dt>Formação</dt><dd>Análise e Desenvolvimento de Sistemas — IFSP Campos do Jordão</dd></div>
-        <div class="fact"><dt>Experiência</dt><dd>Pousadas D'Biagy — desenvolvimento do sistema de gestão e da infraestrutura em nuvem</dd></div>
-        <div class="fact"><dt>Áreas</dt><dd>Aberto a oportunidades em todo o desenvolvimento: front-end, back-end, dados e infraestrutura</dd></div>
-        <div class="fact"><dt>Freelance</dt><dd>Sistemas de gestão, automações, sites e cardápios digitais</dd></div>
+        <div class="fact"><dt data-i18n="fact1.dt">Formação</dt><dd data-i18n="fact1.dd">Análise e Desenvolvimento de Sistemas — IFSP Campos do Jordão</dd></div>
+        <div class="fact"><dt data-i18n="fact2.dt">Experiência</dt><dd data-i18n="fact2.dd">Pousadas D'Biagy — desenvolvimento do sistema de gestão e da infraestrutura em nuvem</dd></div>
+        <div class="fact"><dt data-i18n="fact3.dt">Áreas</dt><dd data-i18n="fact3.dd">Aberto a oportunidades em todo o desenvolvimento: front-end, back-end, dados e infraestrutura</dd></div>
+        <div class="fact"><dt data-i18n="fact4.dt">Freelance</dt><dd data-i18n="fact4.dd">Sistemas de gestão, automações, sites e cardápios digitais</dd></div>
       </dl>
     </div>
   </section>
@@ -80,21 +86,21 @@
   <section id="stack" style="border-top:1px solid var(--line)">
     <span class="label">Stack</span>
     <div class="sec-head">
-      <h2>Tecnologias</h2>
-      <div class="legend" id="legend" role="group" aria-label="Destacar por área"></div>
+      <h2 data-i18n="stack.title">Tecnologias</h2>
+      <div class="legend" id="legend" role="group" aria-label="Destacar por área" data-i18n-aria="stack.aria"></div>
     </div>
     <div class="tiles" id="tiles"></div>
   </section>
 
   <section id="projetos" style="border-top:1px solid var(--line)">
-    <span class="label">Projetos</span>
+    <span class="label" data-i18n="projects.label">Projetos</span>
     <div class="sec-head">
-      <h2>Trabalho selecionado</h2>
-      <div class="filters" role="group" aria-label="Filtrar projetos">
-        <button type="button" data-f="all" aria-pressed="true">Todos</button>
-        <button type="button" data-f="sys" aria-pressed="false">Sistemas</button>
-        <button type="button" data-f="infra" aria-pressed="false">Infraestrutura</button>
-        <button type="button" data-f="study" aria-pressed="false">Estudos e pessoais</button>
+      <h2 data-i18n="projects.title">Trabalho selecionado</h2>
+      <div class="filters" role="group" aria-label="Filtrar projetos" data-i18n-aria="filters.aria">
+        <button type="button" data-f="all" aria-pressed="true" data-i18n="filters.all">Todos</button>
+        <button type="button" data-f="sys" aria-pressed="false" data-i18n="filters.sys">Sistemas</button>
+        <button type="button" data-f="infra" aria-pressed="false" data-i18n="filters.infra">Infraestrutura</button>
+        <button type="button" data-f="study" aria-pressed="false" data-i18n="filters.study">Estudos e pessoais</button>
       </div>
     </div>
 
@@ -103,13 +109,13 @@
 
   <section id="contato">
     <div class="contact">
-      <h2>Vamos tirar sua ideia do papel?</h2>
-      <p>Conte como o seu processo funciona hoje e eu te mostro como dá pra automatizar. Desenvolvo sistemas de gestão, automações, sites e cardápios digitais.</p>
+      <h2 data-i18n="contact.title">Vamos tirar sua ideia do papel?</h2>
+      <p data-i18n="contact.text">Conte como o seu processo funciona hoje e eu te mostro como dá pra automatizar. Desenvolvo sistemas de gestão, automações, sites e cardápios digitais.</p>
       <div class="ctas">
         <a class="btn primary" href="https://wa.me/5512992429757" target="_blank" rel="noopener"><svg class="brand-ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
         <a class="btn" href="https://www.linkedin.com/in/castilhodan/" target="_blank" rel="noopener"><svg class="brand-ico" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
         <a class="btn" href="https://github.com/zdANSZ" target="_blank" rel="noopener"><svg class="brand-ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
-        <a class="btn" href="assets/curriculo-daniel-castilho.pdf" download><svg class="brand-ico" aria-hidden="true"><use href="#i-download"/></svg>Currículo</a>
+        <a class="btn" href="assets/curriculo-daniel-castilho.pdf" download><svg class="brand-ico" aria-hidden="true"><use href="#i-download"/></svg><span data-i18n="cta.cv">Currículo</span></a>
       </div>
     </div>
   </section>
@@ -128,6 +134,7 @@
 
 <script src="assets/js/icons.js"></script>
 <script src="assets/js/projects.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

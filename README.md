@@ -10,6 +10,7 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 - Animação do hero feita em Canvas 2D, reagindo ao cursor
 - Seções de stack e projetos com filtros e efeitos de hover
 - Responsivo e com suporte a `prefers-reduced-motion`
+- Português e inglês, com troca pelo botão PT/EN
 
 ## Estrutura
 
@@ -23,13 +24,15 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
     ├── css/style.css     # estilos e tokens de cor (variáveis em :root)
     ├── img/              # favicon, apple-touch-icon e imagem de compartilhamento (og.png)
     └── js/
-        ├── projects.js   # dados dos cards de projetos
+        ├── projects.js   # dados dos cards de projetos (com versão em inglês)
+        ├── i18n.js       # textos em inglês do botão PT/EN
         ├── icons.js      # SVGs do Devicon + ícones próprios da stack
         └── main.js       # monta projetos e stack, filtros, brilho do cursor e animação do hero
 ```
 
 - **Novo projeto:** adicione um objeto em `assets/js/projects.js`; os campos estão descritos no topo do arquivo.
 - **Nova tecnologia:** adicione uma linha em `techs` no `main.js`; se tiver logo no Devicon, inclua o SVG em `icons.js` com a mesma chave.
+- **Textos em inglês:** o português fica no próprio `index.html`; marque o elemento com `data-i18n="chave"` e coloque a tradução em `assets/js/i18n.js`. Dá para abrir direto em inglês com `?lang=en` na URL.
 - **Currículo:** edite `curriculo/curriculo.html`, abra no Chrome e use Imprimir → Salvar como PDF (A4, margens "Nenhuma"), substituindo `assets/curriculo-daniel-castilho.pdf`.
 - **Prévia de link:** depois do deploy, troque `og:image` no `index.html` pela URL absoluta (ex.: `https://seu-dominio/assets/img/og.png`), que é o formato exigido por WhatsApp e LinkedIn.
 
