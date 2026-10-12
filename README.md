@@ -34,13 +34,16 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 - **Nova tecnologia:** adicione uma linha em `techs` no `main.js`; se tiver logo no Devicon, inclua o SVG em `icons.js` com a mesma chave.
 - **Textos em inglês:** o português fica no próprio `index.html`; marque o elemento com `data-i18n="chave"` e coloque a tradução em `assets/js/i18n.js`. Dá para abrir direto em inglês com `?lang=en` na URL.
 - **Currículo:** edite `curriculo/curriculo.html`, abra no Chrome e use Imprimir → Salvar como PDF (A4, margens "Nenhuma"), substituindo `assets/curriculo-daniel-castilho.pdf`.
-- **Prévia de link:** depois do deploy, troque `og:image` no `index.html` pela URL absoluta (ex.: `https://seu-dominio/assets/img/og.png`), que é o formato exigido por WhatsApp e LinkedIn.
+- **Domínio:** o site está em https://portifolio-dancastilho.vercel.app. Se mudar de domínio, atualize `canonical`, `og:url` e `og:image` no `index.html` (WhatsApp e LinkedIn exigem URL absoluta) e o link no currículo.
 
 ## Rodando localmente
 
 Basta abrir o `index.html` no navegador.
 
 ## Deploy
+
+No ar em https://portifolio-dancastilho.vercel.app — cada push na `main` publica automaticamente.
+
 
 Publicado na Vercel como site estático: importe o repositório, mantenha o preset **Other** e faça o deploy.
 
