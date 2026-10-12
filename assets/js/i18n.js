@@ -22,6 +22,7 @@ window.I18N_EN={
   'about.p2':'Today I handle the whole cycle: data modeling, APIs, interface, server and deploy. I set up and manage the cloud infrastructure that keeps these systems running and, in college, built a server cluster with Docker Swarm.',
   'about.p3':'A large part of my work today is orchestrating AI agents such as Claude Code and Codex. I break the problem into steps, write the specs, configure subagents, skills and rules for each kind of task, and review everything generated before it reaches production. AI speeds up delivery, while architecture, security and quality decisions stay with me.',
   'about.p4':'I like shipping software that runs in production, with attention to security, testing and the people who use it.',
+  'about.photo':'Photo of Daniel Castilho',
   'fact1.dt':'Education',
   'fact1.dd':'Systems Analysis and Development — IFSP Campos do Jordão',
   'fact2.dt':'Experience',

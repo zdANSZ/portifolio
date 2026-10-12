@@ -22,7 +22,7 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 └── assets/
     ├── curriculo-daniel-castilho.pdf   # baixado pelo botão "Currículo"
     ├── css/style.css     # estilos e tokens de cor (variáveis em :root)
-    ├── img/              # favicon, apple-touch-icon e imagem de compartilhamento (og.png)
+    ├── img/              # foto (daniel.webp/.jpg), favicon, apple-touch-icon e og.png
     └── js/
         ├── projects.js   # dados dos cards de projetos (com versão em inglês)
         ├── i18n.js       # textos em inglês do botão PT/EN

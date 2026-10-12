@@ -72,6 +72,10 @@
       const t=lang==='en'?EN[el.dataset.i18n]:undefined;
       el.innerHTML=t!==undefined?t:orig.get(el);
     });
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+      if(!el.dataset.altPt)el.dataset.altPt=el.alt;
+      el.alt=lang==='en'?EN[el.dataset.i18nAlt]:el.dataset.altPt;
+    });
     document.querySelectorAll('[data-i18n-aria]').forEach(el=>{
       if(!origAria.has(el))origAria.set(el,el.getAttribute('aria-label'));
       el.setAttribute('aria-label',lang==='en'?EN[el.dataset.i18nAria]:origAria.get(el));
