@@ -5,6 +5,8 @@
    color           variável de cor do card: node, accent, c-data, c-infra, c-ai
    wide            ocupa duas colunas na grade
    link            {text} vira rótulo; {text, href} vira link externo
+   image           (opcional) captura da tela, mostrada no lugar do shot
+   demo            (opcional) caminho da demonstração navegável, com dados fictícios
    en              versão em inglês: só os campos que mudam (title, status, desc, chips, link.text)
    shot            miniatura decorativa (HTML com blocos .sk) mostrada no topo do card */
 window.PROJECTS=[
@@ -14,6 +16,8 @@ window.PROJECTS=[
     filter: "sys",
     color: "node",
     wide: true,
+    image: "assets/img/projetos/dbiagy.webp",
+    demo: "demos/dbiagy/index.html",
     desc: "Sistema de gestão operacional de uma rede de pousadas, usado diariamente pelos setores de governança, manutenção, compras e estoque. Inclui autenticação com acesso por cargo, trilha de auditoria, upload de documentos e testes automatizados da API.",
     chips: ["PHP", "JavaScript", "PostgreSQL", "Supabase", "Tailwind"],
     link: {text: "Uso interno"},

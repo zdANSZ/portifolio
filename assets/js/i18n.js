@@ -15,6 +15,7 @@ window.I18N_EN={
   'hero.lede':'I build web systems, APIs and automations, set up the infrastructure they run on and use AI agents throughout the development workflow, from planning to code review.',
   'cta.projects':'View projects',
   'cta.cv':'Résumé (PT)',
+  'cta.demo':'Interactive demo',
 
   'about.label':'About',
   'about.title':'I learned by building what the operation needed.',

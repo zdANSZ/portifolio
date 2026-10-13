@@ -15,12 +15,12 @@
       const p=lang==='en'&&base.en?{...base,...base.en,link:{...base.link,...base.en.link}}:base;
       return `
     <article class="card${p.wide?' wide':''}" data-s="${p.filter}" style="--c:var(--${p.color})">
-      <div class="shot">${p.shot}</div>
+      <div class="shot">${p.image?`<a class="win win-img" href="${p.demo||p.image}" tabindex="-1" aria-hidden="true"><img src="${p.image}" alt="" loading="lazy" decoding="async"></a>`:p.shot}</div>
       <div class="body">
         <div class="top"><h3>${p.title}</h3><span class="status${p.statusKind?' '+p.statusKind:''}">${p.status}</span></div>
         <p>${p.desc}</p>
         <div class="chips">${p.chips.map(c=>`<span>${c}</span>`).join('')}</div>
-        <div class="links">${p.link.href?`<a href="${p.link.href}" target="_blank" rel="noopener">${p.link.text} <span aria-hidden="true">↗</span></a>`:p.link.text}</div>
+        <div class="links">${p.demo?`<a href="${p.demo}">${lang==='en'?EN['cta.demo']:'Ver demo interativa'} <span aria-hidden="true">↗</span></a>`:''}${p.link.href?`<a href="${p.link.href}" target="_blank" rel="noopener">${p.link.text} <span aria-hidden="true">↗</span></a>`:`<span>${p.link.text}</span>`}</div>
       </div>
     </article>`;}).join('');
     projects.querySelectorAll('.card').forEach(c=>follow(c,'--mx','--my'));

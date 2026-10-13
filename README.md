@@ -17,6 +17,8 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 ```
 .
 ├── index.html            # marcação: hero, sobre, stack, contato e sprite dos ícones de marca
+├── demos/
+│   └── dbiagy/           # demonstração navegável do Sistema D'Biagy (dados fictícios)
 ├── curriculo/
 │   └── curriculo.html    # fonte do currículo em PDF
 └── assets/
@@ -33,6 +35,7 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 - **Novo projeto:** adicione um objeto em `assets/js/projects.js`; os campos estão descritos no topo do arquivo.
 - **Nova tecnologia:** adicione uma linha em `techs` no `main.js`; se tiver logo no Devicon, inclua o SVG em `icons.js` com a mesma chave.
 - **Textos em inglês:** o português fica no próprio `index.html`; marque o elemento com `data-i18n="chave"` e coloque a tradução em `assets/js/i18n.js`. Dá para abrir direto em inglês com `?lang=en` na URL.
+- **Demos de projetos:** cada demo é uma página estática em `demos/<projeto>/`, reescrita só com a interface e dados fictícios (sem código, API ou banco do sistema real). No card, os campos `image` e `demo` do `projects.js` mostram a captura e o link.
 - **Currículo:** edite `curriculo/curriculo.html`, abra no Chrome e use Imprimir → Salvar como PDF (A4, margens "Nenhuma"), substituindo `assets/curriculo-daniel-castilho.pdf`.
 - **Domínio:** o site está em https://portifolio-dancastilho.vercel.app. Se mudar de domínio, atualize `canonical`, `og:url` e `og:image` no `index.html` (WhatsApp e LinkedIn exigem URL absoluta) e o link no currículo.
 

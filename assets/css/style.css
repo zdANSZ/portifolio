@@ -130,6 +130,8 @@ h2{font-weight:600;font-size:clamp(34px,4.6vw,52px);line-height:1.02;letter-spac
 .wide .shot{height:230px}
 .win{position:absolute;left:24px;right:24px;top:28px;bottom:-14px;border:1px solid var(--line-2);border-radius:10px 10px 0 0;background:var(--bg);box-shadow:0 20px 50px rgba(0,0,0,.45);padding:28px 14px 14px;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .card:hover .win{transform:translateY(-6px)}
+.win-img{display:block;padding:22px 0 0;overflow:hidden}
+.win-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:left top;border-top:1px solid var(--line-2)}
 .win::before{content:"";position:absolute;top:10px;left:12px;width:30px;height:6px;background:radial-gradient(circle 3px at 3px 3px,var(--line-2) 98%,transparent) 0 0/12px 6px repeat-x}
 .sk{background:var(--raise);border-radius:5px}
 .sk.c{background:color-mix(in srgb,var(--c) 55%,transparent)}

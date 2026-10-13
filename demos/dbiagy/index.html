@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema D'Biagy — Demonstração</title>
+<meta name="description" content="Demonstração navegável do sistema de gestão operacional de pousadas desenvolvido por Daniel Castilho. Dados fictícios.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#005443">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+<div class="faixa" role="note">
+  <span class="tag">Demo</span>
+  <span class="msg"><b>Dados fictícios</b><span> · interface de demonstração, nada é salvo</span></span>
+  <a href="../../index.html#projetos">← Voltar ao portfólio</a>
+</div>
+
+<aside class="lat" aria-label="Menu principal">
+  <div class="marca">
+    <span class="logo">D</span>
+    <div><b>D'Biagy</b><small>Gestão Integrada</small></div>
+  </div>
+  <nav id="menu"></nav>
+  <div class="lat-eu">
+    <span class="av">AS</span>
+    <div><b>Ana Souza</b><small>Governanta · admin</small></div>
+  </div>
+</aside>
+
+<main>
+  <header class="topo" id="topo"></header>
+  <div class="conteudo" id="conteudo"></div>
+</main>
+
+<div class="veu" id="veu" role="dialog" aria-modal="true" aria-labelledby="modalTit">
+  <form class="modal" id="modal"></form>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="demo.js"></script>
+</body>
+</html>
