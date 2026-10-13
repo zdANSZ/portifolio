@@ -18,7 +18,7 @@ Desenvolvedor full stack, de Taubaté (SP), estudante de Análise e Desenvolvime
 .
 ├── index.html            # marcação: hero, sobre, stack, contato e sprite dos ícones de marca
 ├── demos/
-│   └── dbiagy/           # demonstração navegável do Sistema D'Biagy (dados fictícios)
+│   └── gestao-hoteleira/ # demonstração navegável do sistema de gestão hoteleira (dados fictícios)
 ├── curriculo/
 │   └── curriculo.html    # fonte do currículo em PDF
 └── assets/

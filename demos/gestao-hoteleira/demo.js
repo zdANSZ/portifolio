@@ -1,4 +1,4 @@
-/* Demonstração do Sistema D'Biagy.
+/* Demonstração do sistema de gestão hoteleira.
    Tudo aqui é fictício e fica só na memória da página: não há servidor, banco,
    autenticação nem regra de negócio do sistema real. Recarregar volta ao início. */
 (function(){

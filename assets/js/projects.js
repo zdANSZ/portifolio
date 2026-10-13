@@ -11,18 +11,18 @@
    shot            miniatura decorativa (HTML com blocos .sk) mostrada no topo do card */
 window.PROJECTS=[
   {
-    title: "Sistema D'Biagy",
+    title: "Sistema de Gestão Hoteleira",
     status: "Em produção",
     filter: "sys",
     color: "node",
     wide: true,
-    image: "assets/img/projetos/dbiagy.webp",
-    demo: "demos/dbiagy/index.html",
+    image: "assets/img/projetos/gestao-hoteleira.webp",
+    demo: "demos/gestao-hoteleira/index.html",
     desc: "Sistema de gestão operacional de uma rede de pousadas, usado diariamente pelos setores de governança, manutenção, compras e estoque. Inclui autenticação com acesso por cargo, trilha de auditoria, upload de documentos e testes automatizados da API.",
     chips: ["PHP", "JavaScript", "PostgreSQL", "Supabase", "Tailwind"],
     link: {text: "Uso interno"},
     en: {
-      title: "D'Biagy System",
+      title: "Hotel Management System",
       status: "In production",
       desc: "Operations management system for a chain of inns, used daily by housekeeping, maintenance, purchasing and inventory teams. Includes role-based access, audit trail, document uploads and automated API tests.",
       link: {text: "Internal use"},
