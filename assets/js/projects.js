@@ -221,14 +221,16 @@ window.PROJECTS=[
   },
   {
     title: "Compila",
-    status: "Ativo",
+    status: "MVP",
+    statusKind: "dev",
     filter: "study",
+    image: "assets/img/projetos/compila.webp",
     color: "node",
     desc: "Plataforma de prática de programação com exercícios e correção assistida por IA. A IA roda pela conta de cada usuário, sem custo de API para a plataforma.",
     chips: ["JavaScript", "Supabase", "IA"],
     link: {text: "compila.vercel.app", href: "https://compila.vercel.app/"},
     en: {
-      status: "Active",
+      status: "MVP",
       desc: "Coding practice platform with exercises and AI-assisted grading. The AI runs on each user's own account, with no API cost for the platform.",
       chips: ["JavaScript", "Supabase", "AI"],
     },
