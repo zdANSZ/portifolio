@@ -68,13 +68,13 @@ window.PROJECTS=[
     filter: "sys",
     color: "accent",
     wide: true,
+    image: "assets/img/projetos/zapedix.webp",
     desc: "SaaS multi-tenant de cardápio digital: o pedido chega pronto no WhatsApp da loja. Painel com crediário, faturamento e catálogo, com isolamento de dados por cliente e suíte de testes de permissão.",
     chips: ["PostgreSQL", "Supabase", "Node.js", "Chart.js"],
-    link: {text: "Em desenvolvimento"},
+    link: {text: "zapedix.com.br", href: "https://www.zapedix.com.br/"},
     en: {
       status: "MVP",
       desc: "Multi-tenant SaaS digital menu: orders arrive ready in the store's WhatsApp. Dashboard with store credit, billing and catalog, per-tenant data isolation and a permission test suite.",
-      link: {text: "In development"},
     },
     shot: `
       <div class="win">

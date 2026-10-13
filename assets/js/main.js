@@ -15,7 +15,7 @@
       const p=lang==='en'&&base.en?{...base,...base.en,link:{...base.link,...base.en.link}}:base;
       return `
     <article class="card${p.wide?' wide':''}" data-s="${p.filter}" style="--c:var(--${p.color})">
-      <div class="shot">${p.image?`<a class="win win-img" href="${p.demo||p.image}" tabindex="-1" aria-hidden="true"><img src="${p.image}" alt="" loading="lazy" decoding="async"></a>`:p.shot}</div>
+      <div class="shot">${p.image?`<a class="win win-img" href="${p.demo||p.link.href||p.image}"${!p.demo&&p.link.href?' target="_blank" rel="noopener"':''} tabindex="-1" aria-hidden="true"><img src="${p.image}" alt="" loading="lazy" decoding="async"></a>`:p.shot}</div>
       <div class="body">
         <div class="top"><h3>${p.title}</h3><span class="status${p.statusKind?' '+p.statusKind:''}">${p.status}</span></div>
         <p>${p.desc}</p>
