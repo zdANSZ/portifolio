@@ -63,8 +63,7 @@ window.PROJECTS=[
   },
   {
     title: "Zapedix",
-    status: "MVP",
-    statusKind: "dev",
+    status: "Em produção",
     filter: "sys",
     color: "accent",
     wide: true,
@@ -73,7 +72,7 @@ window.PROJECTS=[
     chips: ["PostgreSQL", "Supabase", "Node.js", "Chart.js"],
     link: {text: "zapedix.com.br", href: "https://www.zapedix.com.br/"},
     en: {
-      status: "MVP",
+      status: "In production",
       desc: "Multi-tenant SaaS digital menu: orders arrive ready in the store's WhatsApp. Dashboard with store credit, billing and catalog, per-tenant data isolation and a permission test suite.",
     },
     shot: `
